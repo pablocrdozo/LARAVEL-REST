@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('api/books/create/{isbn}', 'App\Http\Controllers\ServiceApiBooksController@create');
+Route::resource('api/books', 'App\Http\Controllers\ApiBooksResourceController');
+Route::get('api/books/delete/{isbn}', 'App\Http\Controllers\ServiceApiBooksController@delete');
